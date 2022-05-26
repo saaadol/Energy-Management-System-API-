@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gateway Name</th>
+                    <th></th>
+                    <th>Device Name</th>
+                    <th></th>
+                    <th>Serial Number</th>
+                    <th></th>
+                    <th>Adress</th>
+                    <th></th>
+                    <th>Baud Rate</th>
+                    <th></th>
+                    <th>Connection type</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for device in devices %}
+                <tr>
+                    <td>{{device.Gateway_Name}}</td>
+                    <td></td>
+                    <td>{{device.DeviceName}}</td>
+                    <td></td>
+                    <td>{{device.slavename}}</td>
+                    <td></td>
+                    <td>{{device.adress}}</td>
+                    <td></td>
+                    <td>{{device.baud_rate}}</td>
+                    <td></td>
+                    <td>{{device.connection_type}}</td>
+                    <td>
+                        <a href="/editdevice/{{ device.id }}">Edit</a>
+                        <a href="/deletedevice/{{ device.id }}">Delete</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+                
+                
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <button><a href="/device">Add new Device</a></button>    
+    </body>
+</html>

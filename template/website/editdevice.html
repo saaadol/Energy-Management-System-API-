@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <form method="POST" action="/updatedevice/{{device.id}}">
+            {% csrf_token %}
+            <div>
+                <br>
+                <p>
+                    <h3>Update Device</h3>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Gatewa Name: 
+                </p>
+            </div>
+            <div>
+            <input type="text" name="Gateway_Name" value="{{device.Gateway_Name}}"/>
+            </div>
+
+
+            <div>
+                <p>
+                    Device Name: 
+                </p>
+            </div>
+            <div>
+            <input type="text" name="DeviceName" value="{{device.DeviceName}}"/>
+            </div>
+
+            <div>
+                <p>
+                    Serial Number: 
+                </p>
+            </div>
+            <div>
+            <input type="text" name="slavename" value="{{device.slavename}}"/>
+            </div>
+
+            <div>
+                <p>
+                    Adress: 
+                </p>
+            </div>
+            <div>
+            <input type="text" name="adress" value="{{device.adress}}"/>
+            </div>
+            
+            <div>
+                <p>
+                    Baud Rate: 
+                </p>
+            </div>
+            <div>
+            <input type="text" name="baud_rate" value="{{device.baud_rate}}"/>
+            </div>
+
+            <div>
+                <p>
+                    Connection Type: 
+                </p>
+            </div>
+            <div>
+            <input type="text" name="connection_type" value="{{device.connection_type}}"/>
+            </div>
+            
+
+            <div>
+                <br>
+                <button type="submit">Update</button>
+            </div>
+
+        </form>
+    </body>

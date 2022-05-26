@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <form method="POST" action="/device">
+            {% csrf_token %}
+            <div>
+                <br>
+                <p>
+                    <h3>Device Details</h3>
+                </p>
+                <div>
+                    <p>Gateway Name : </p> {{ form.Gateway_Name }}
+                </div>
+                <div>
+                    <p>Device Name : </p> {{ form.DeviceName }}
+                </div>
+                <div>
+                    <p>Serial Name : </p> {{ form.slavename }}
+                </div>
+                <div>
+                    <p>Adress : </p> {{ form.adress }}
+                </div>
+                <div>
+                    <p>Baud Rate : </p> {{ form.baud_rate }}
+                </div>
+                <div>
+                    <p>Connection Type : </p> {{ form.connection_type }}
+                </div>
+                
+                <div>
+                    <br>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </div>
+
+
+        </form>
+    </body>
+</html>
